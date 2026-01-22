@@ -70,11 +70,10 @@ def visualize(learning_function, policy):
     print("Generating board...")
     BOARD = generate_board(ROWS, COLS, POISON_PROB, CHEESE_SIMPLEX)
     print("Started training...")
-    THETA = learning_function(BOARD)
+    PARAMETER = learning_function(BOARD)
 
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    pygame.display.set_caption("Policy-Gradient Agent")
     clock = pygame.time.Clock()
 
     tile_font = pygame.font.SysFont('Arial', 24, bold=True)
@@ -96,7 +95,7 @@ def visualize(learning_function, policy):
 
             if event.type == pygame.KEYDOWN:
                 if not game_over:
-                    action = policy(state, THETA)
+                    action = policy(state, PARAMETER)
 
                     if action is None:
                         game_over = True
