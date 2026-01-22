@@ -35,6 +35,8 @@ def learn_reinforce(board):
             action = policy(state, theta)
             new_state = get_new_state(state, action)
             reward = get_reward(new_state, board_)
+            if board_[new_state[1], new_state[0]] > 0:
+                board_[new_state[1], new_state[0]] -= 1
             
             trajectory.append((state, ACTION_TO_INDEX[action], reward))
             
