@@ -12,7 +12,7 @@ Ce projet implémente et compare deux algorithmes d'apprentissage par renforceme
 * **Récompenses :** L'agent reçoit des bonus pour le fromage, des malus pour le poison, et un petit bonus de proximité pour l'encourager à explorer.
 
 ## Utilisation
-Pensez à créer un environnement virtuel (via ```python -m venv venv```) avant d'installer les dépendances avec la commande ```pip install -r requirements.txt```.
+Pensez à créer un environnement virtuel (via ```python -m venv venv```) et à l'activer avant d'installer les dépendances avec la commande ```pip install -r requirements.txt```.
 
 Pour lancer le projet, il vous suffit d'exécuter le fichier principal [main.py](main.py) :
 
