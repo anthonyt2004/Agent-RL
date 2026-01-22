@@ -43,7 +43,6 @@ def get_reward(state, board):
         return -1000
 
     if value > 0:
-        board[state[1], state[0]] -= 1
         return 50
 
     distance = find_nearest_cheese_distance(state, board)
